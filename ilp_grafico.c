@@ -82,8 +82,8 @@ int main(int argc, char *argv[]) {
     registrar_csv(arquivo_csv, nivel_otimizacao, "Laco_4_Fator_8", tempo_gasto);
 
 
-    // --- NOVA SEÇÃO FINAL ---
-    // Criamos um resultado final para garantir que todas as somas são essenciais.
+    
+    //Um resultado final para garantir que todas as somas são essenciais.
     long long total_geral = soma_dependente + soma_total_indep4 + soma_total_indep8;
     printf("\nVerificacao de Somas (Dependente: %lld, Fator 4: %lld, Fator 8: %lld)\n", 
            soma_dependente, soma_total_indep4, soma_total_indep8);
@@ -92,6 +92,5 @@ int main(int argc, char *argv[]) {
     fclose(arquivo_csv);
 
     // O valor de retorno do programa agora depende dos resultados.
-    // O compilador NÃO PODE otimizar isto.
     return (int)(total_geral % 256);
 }
